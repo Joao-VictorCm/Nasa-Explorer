@@ -1,0 +1,25 @@
+{
+  "name": "nasa-explorer",
+  "version": "1.0.0",
+  "description": "Projeto consumindo uma api da NASA",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Joao-VictorCm/Nasa-Explorer.git"
+  },
+  "author": "João",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Joao-VictorCm/Nasa-Explorer/issues"
+  },
+  "homepage": "https://github.com/Joao-VictorCm/Nasa-Explorer#readme",
+  "dependencies": {
+    "axios": "^1.7.7",
+    "ejs": "^3.1.10",
+    "express": "^4.21.1"
+  }
+}
