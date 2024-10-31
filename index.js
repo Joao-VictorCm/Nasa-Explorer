@@ -4,9 +4,10 @@ import axios from "axios"
 const app = express()
 const port = 3000
 const API_URL = "https://api.nasa.gov/planetary/apod"
+const apiKey = "0PyXWKPSRwnftr7fdJeEqc2RatHhzxGFaXuMXRoN"
 
 
-console.log(API_URL)
+
 
 app.use(express.static("public", {
     setHeaders: (res, path) =>{
@@ -16,7 +17,13 @@ app.use(express.static("public", {
     }
 }))
 
-app.get("/", (req, res) => {
+app.get("/", async (req, res) => {
+    const result = await axios.get(API_URL,{
+        params:{
+            api_key: apiKey
+        }
+    })
+    console.log(result)
     res.render("main.ejs")
 })
 
