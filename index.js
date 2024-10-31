@@ -3,8 +3,10 @@ import axios from "axios"
 
 const app = express()
 const port = 3000
-const API_URL = "..."
+const API_URL = "https://api.nasa.gov/planetary/apod"
 
+
+console.log(API_URL)
 
 app.use(express.static("public", {
     setHeaders: (res, path) =>{
