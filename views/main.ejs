@@ -1,9 +1,23 @@
 <%- include("partials/header.ejs") %>
-<main>
 
-<p>ola</p>
+<div class="card-primary">
+    <div class="relative flex w-80 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md" id="card-total">
+        <% if(locals.data){ %>
+        
+  <div class="relative mx-4 -mt-6 h-40 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40 bg-gradient-to-r from-blue-500 to-blue-600">
+    <img src="<%= data.url %>" />
+  </div>
+  <div class="p-6">
+    <h5 class="mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
+     <%= data.title %>
+    </h5>
+    <p class="block font-sans text-base font-light leading-relaxed text-inherit antialiased">
+        <%= data.explanation %>
+    </p>
+  </div>
+  <% } else { %>
+    <%}%>
+</div>
 
-
-</main>
-
+</div>
 <%- include("partials/footer.ejs") %>

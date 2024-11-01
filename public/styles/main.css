@@ -1,3 +1,11 @@
-body{
-    background-color: aqua;
+.card-primary{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 45px;
+}
+
+#card-total{
+    width: 500px;
+    height: 700px;
 }

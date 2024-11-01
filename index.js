@@ -18,13 +18,14 @@ app.use(express.static("public", {
 }))
 
 app.get("/", async (req, res) => {
-    const result = await axios.get(API_URL,{
+    const response = await axios.get(API_URL,{
         params:{
             api_key: apiKey
         }
     })
+    const result = response.data
     console.log(result)
-    res.render("main.ejs")
+    res.render("main.ejs", {data: result})
 })
 
 
