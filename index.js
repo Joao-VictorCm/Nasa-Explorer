@@ -17,7 +17,14 @@ app.use(express.static("public", {
     }
 }))
 
-app.get("/", async (req, res) => {
+app.get("/", (req, res) =>{
+    res.render("index.ejs")
+})
+
+
+
+
+app.get("/APOD", async (req, res) => {
     const response = await axios.get(API_URL,{
         params:{
             api_key: apiKey
