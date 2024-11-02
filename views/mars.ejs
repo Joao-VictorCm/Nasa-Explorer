@@ -1,0 +1,9 @@
+<div>
+    <% if (locals.data && data.length > 0) { %>
+        <% data.forEach(element => { %>
+            <img src="<%= element.img_src %>" alt="Imagem de Marte">
+        <% }); %>
+    <% } else { %>
+        <p>Nenhuma imagem disponível.</p>
+    <% } %>
+</div>
