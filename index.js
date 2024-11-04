@@ -1,11 +1,11 @@
 import express from "express"
 import axios from "axios"
 
-
+const number = Math.floor(Math.random() * 35)
 const app = express()
 const port = 3000
 const apod = "https://api.nasa.gov/planetary/apod"
-const marsPhoto = "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&page=1&"
+const marsPhoto = `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&page=${number}&`
 const apiKey = "0PyXWKPSRwnftr7fdJeEqc2RatHhzxGFaXuMXRoN"
 
 
