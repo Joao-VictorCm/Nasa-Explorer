@@ -1,15 +1,6 @@
 import express from "express"
 import axios from "axios"
 
-const ano = new Date().getFullYear()
-console.log(ano)
-const mes = new Date().getMonth()
-console.log(mes)
-const dia = new Date().getDate()
-console.log(dia)
-
-
-
 
 const app = express()
 const port = 3000
@@ -24,7 +15,7 @@ const apiKey = "0PyXWKPSRwnftr7fdJeEqc2RatHhzxGFaXuMXRoN"
 app.use(express.static("public", {
     setHeaders: (res, path) =>{
         if(path.endsWith(".css")){
-            res.set("Content-Type", "text.css")
+            res.set("Content-Type", "text/css")
         }
     }
 }))

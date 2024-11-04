@@ -1,2 +1,11 @@
 ideia colocar mais de uma api no site 
 estirizar cada pagia com uma api da nasa
+
+
+
+      <% if (locals.data && data.length > 0) { %>
+          <% data.forEach(element => { %>
+      <% }); %>
+      <% } else { %>
+         <%}%>
+<img class="img-hover" src="<%= element.img_src %>"/>
