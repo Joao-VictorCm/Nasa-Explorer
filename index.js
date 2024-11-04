@@ -1,10 +1,20 @@
 import express from "express"
 import axios from "axios"
 
+const ano = new Date().getFullYear()
+console.log(ano)
+const mes = new Date().getMonth()
+console.log(mes)
+const dia = new Date().getDate()
+console.log(dia)
+
+
+
+
 const app = express()
 const port = 3000
 const apod = "https://api.nasa.gov/planetary/apod"
-const marsPhoto = "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&page=2&"
+const marsPhoto = "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&page=1&"
 const apiKey = "0PyXWKPSRwnftr7fdJeEqc2RatHhzxGFaXuMXRoN"
 
 
@@ -45,12 +55,11 @@ app.get("/Mars", async (req, res) => {
         }
     })
     const result = response.data.photos
-    console.log(result)
     res.render("mars.ejs", {data: result})
 })
 
 
 
 app.listen(port, () =>{
-    console.log(`server rodando na porta ${port}`)
+    console.log(`server rodando na porta http://localhost:${port}/`)
 })
