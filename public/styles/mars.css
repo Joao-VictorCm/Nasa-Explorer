@@ -1,5 +1,17 @@
-.lista{
+.img-hover{
+    max-width: 50px;
+    max-height: 50px;
+}
+
+.card-primary{
+    background-color: #d8e3ec;
+    width: 200px;
+    padding: 15px;
     display: flex;
-    background-color: black;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    border-radius: 15px;
+    transition: 0.2s ease-in-out;
+    display: inline;
 }
